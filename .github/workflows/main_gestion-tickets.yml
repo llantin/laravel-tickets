@@ -36,21 +36,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: laravel-app
-          path: |
-            app
-            bootstrap
-            config
-            database
-            public
-            resources
-            routes
-            storage
-            tests
-            artisan
-            composer.json
-            composer.lock
-            .env
-            phpunit.xml
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
@@ -78,3 +64,4 @@ jobs:
           app-name: 'gestion-tickets'
           slot-name: 'Production'
           package: .
+
